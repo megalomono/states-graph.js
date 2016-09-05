@@ -1,4 +1,4 @@
-var StatesGraph = (function(){
+var StatesGraph = (function(window){
   
     var BLOCK_WIDTH = 200;
     var BLOCK_HEIGHT = 50;
