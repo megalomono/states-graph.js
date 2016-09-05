@@ -1,0 +1,88 @@
+var states = [
+  {
+      id: 1,
+      label: "Iniciado",
+      duration: "2 días"
+  },
+  {
+      id: 2,
+      label: "Listo para protocolo",
+      duration: "2 días"
+  },
+  {
+      id: 2,
+      label: "Listo para protocolo",
+      duration: "2 días"
+  },
+  {
+      id: 2,
+      label: "Listo para protocolo",
+      duration: "2 días"
+  },
+  {
+      id: 3,
+      label: "En protocolo",
+      duration: "5 días",
+      delayed: true
+  },
+  {
+      id: 4,
+      label: "Listo para pool",
+      duration: "2 días"
+  },
+  {
+      id: 5,
+      label: "En pool",
+      duration: "2 días"
+  },
+  {
+      id: 6,
+      label: "Listo para secuenciación",
+      duration: "2 días"
+  },
+  {
+      id: 5,
+      label: "En pool",
+      duration: "2 días"
+  },
+  {
+      id: 6,
+      label: "Listo para secuenciación",
+      duration: "2 días"
+  },
+  {
+      id: 7,
+      label: "En secuenciación",
+      duration: "2 días"
+  },
+  {
+      id: 8,
+      label: "Secuenciado",
+      duration: "2 días"
+  },
+  {
+      id: 2,
+      label: "Listo para protocolo",
+      duration: "2 días"
+  },
+  {
+      id: 3,
+      label: "En protocolo",
+      duration: "2 días"
+  },
+  {
+      id: 1,
+      label: "Iniciado",
+      duration: "2 días"
+  },
+  {
+      id: 2,
+      label: "Listo para protocolo",
+      duration: "2 días"
+  },
+  {
+      id: 3,
+      label: "En protocolo",
+      duration: "2 días"
+  }        
+]
