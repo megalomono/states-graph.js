@@ -1,4 +1,4 @@
-var StatesGraph = (function(window){
+var StatesGraph = (function($, window){
   
     var BLOCK_WIDTH = 200;
     var BLOCK_HEIGHT = 50;
@@ -107,7 +107,7 @@ var StatesGraph = (function(window){
     }
 
     // Canvas processing
-    var canvas, ctx, dragging, lastX, translated;
+    var canvas, ctx, dragging, lastX, translated, currentY;
     var parsedStates = [];
 
     var init = function(canvasElement, states) {
@@ -119,17 +119,17 @@ var StatesGraph = (function(window){
         translated = 0;
         currentY = LINE_HEIGHT;
 
-        canvas.width = 1000;
         canvas.height = 3 * LINE_HEIGHT;
         canvas.onmousedown = _mouseDownHandler;
         window.onmousemove = _mouseMoveHandler;
         window.onmouseup = _mouseUpHandler;
+        $(window).resize(_respondCanvas);
 
         states.forEach(_parseState);
           
-        _draw();
+        _respondCanvas();
     }
-
+    
     var _mouseDownHandler = function(e){
         var evt = e || event;
         dragging = true;
@@ -149,6 +149,13 @@ var StatesGraph = (function(window){
   
     var _mouseUpHandler = function(){
         dragging = false;
+    }
+
+    var _respondCanvas = function () {
+        var container = $(canvas).parent();
+        canvas.width = $(container).width();
+        translated = 0;
+        _draw();
     }
 
     var _parseState = function(s) {
@@ -195,4 +202,4 @@ var StatesGraph = (function(window){
     }
 
     return { init: init }
-})(window);
+})($, window);
