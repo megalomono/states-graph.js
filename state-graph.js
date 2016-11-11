@@ -29,6 +29,7 @@ var StatesGraph = (function ($, window) {
         this.id = stateData.id;
         this.label = stateData.label;
         this.duration = stateData.duration;
+        this.user = stateData.user;
         this.startDate = stateData.startDate;
         this.endDate = stateData.endDate;
         this.comment = stateData.comment;
@@ -113,6 +114,9 @@ var StatesGraph = (function ($, window) {
         // Title
         var title = _splitTextInLines(x + TEXT_LEFT_MARGIN, lastY, this.label);
         lastY = title.lastLineIndex;
+        // User
+        var user = _splitTextInLines(x + TEXT_LEFT_MARGIN, (lastY + 2 * LINE_HEIGHT), this.user);
+        lastY = user.lastLineIndex;
         // Start date
         var startDates = _splitTextInLines(x + TEXT_LEFT_MARGIN, (lastY + 2 * LINE_HEIGHT), this.startDate);
         lastY = startDates.lastLineIndex;
@@ -139,6 +143,7 @@ var StatesGraph = (function ($, window) {
         ctx.save();
         ctx.font = DURATION_FONT;
         ctx.fillStyle = FONT_COLOR;
+        user.lines.forEach(_writeTextLine);
         startDates.lines.forEach(_writeTextLine);
         endDates.lines.forEach(_writeTextLine);
         comments.lines.forEach(_writeTextLine);
@@ -199,6 +204,7 @@ var StatesGraph = (function ($, window) {
         lastX = 0;
         translated = 0;
         currentY = VERTICAL_SPACE_BETWEEN_BLOCKS;
+        parsedStates = [];
 
         canvas.height = 3 * VERTICAL_SPACE_BETWEEN_BLOCKS + 200;
         canvas.onmousedown = _mouseDownHandler;

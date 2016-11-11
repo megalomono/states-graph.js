@@ -2,14 +2,16 @@ var states = [
   {
       id: 1,
       label: "Iniciado",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
-      comment: ""
+      comment: "Comentario de prueba"
   },
   {
       id: 2,
       label: "Listo para protocolo",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Inicio: 12/09/2016",
@@ -18,6 +20,7 @@ var states = [
   {
       id: 2,
       label: "Listo para protocolo",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -26,6 +29,7 @@ var states = [
   {
       id: 2,
       label: "Listo para protocolo",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -34,6 +38,7 @@ var states = [
   {
       id: 3,
       label: "En protocolo",
+      user: "alfonso.perez",
       duration: "5 días",
       delayed: true,
       startDate: "Inicio: 12/09/2016",
@@ -43,6 +48,7 @@ var states = [
   {
       id: 4,
       label: "Listo para pool",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -51,6 +57,7 @@ var states = [
   {
       id: 5,
       label: "En pool",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -59,6 +66,7 @@ var states = [
   {
       id: 6,
       label: "Listo para secuenciación",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -67,6 +75,7 @@ var states = [
   {
       id: 5,
       label: "En pool",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -75,6 +84,7 @@ var states = [
   {
       id: 6,
       label: "Listo para secuenciación",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -83,6 +93,7 @@ var states = [
   {
       id: 7,
       label: "En secuenciación",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -91,6 +102,7 @@ var states = [
   {
       id: 8,
       label: "Secuenciado",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -99,6 +111,7 @@ var states = [
   {
       id: 2,
       label: "Listo para protocolo",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -107,6 +120,7 @@ var states = [
   {
       id: 3,
       label: "En protocolo",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -115,6 +129,7 @@ var states = [
   {
       id: 1,
       label: "Iniciado",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -123,6 +138,7 @@ var states = [
   {
       id: 2,
       label: "Listo para protocolo",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
       endDate: "Fin: 12/09/2016",
@@ -131,9 +147,10 @@ var states = [
   {
       id: 3,
       label: "En protocolo",
+      user: "alfonso.perez",
       duration: "2 días",
       startDate: "Inicio: 12/09/2016",
-      endDate: "Fin: 12/09/2016",
+      endDate: "Estado actual",
       comment: ""
   }        
 ]
