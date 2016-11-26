@@ -108,6 +108,33 @@ var states = [
       endDate: "Fin: 12/09/2016",
       comment: ""
   },
+    {
+      id: 9,
+      label: "Pendiente de pipeline",
+      user: "alfonso.perez",
+      duration: "2 días",
+      startDate: "Inicio: 12/09/2016",
+      endDate: "Fin: 12/09/2016",
+      comment: ""
+  },
+    {
+      id: 10,
+      label: "Pendiente de algoritmo",
+      user: "alfonso.perez",
+      duration: "2 días",
+      startDate: "Inicio: 12/09/2016",
+      endDate: "Fin: 12/09/2016",
+      comment: ""
+  },
+    {
+      id: 11,
+      label: "Pendiente de CNV",
+      user: "alfonso.perez",
+      duration: "2 días",
+      startDate: "Inicio: 12/09/2016",
+      endDate: "Fin: 12/09/2016",
+      comment: ""
+  },
   {
       id: 2,
       label: "Listo para protocolo",
