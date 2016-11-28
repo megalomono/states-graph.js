@@ -20,21 +20,21 @@ var StatesGraph = (function ($, window) {
         this.y1 = y;
         this.x2 = x + BLOCK_WIDTH;
         this.y2 = y + BLOCK_HEIGHT;
-        
+
         this.leftAnchor = {};
         this.leftAnchor.x = x;
         this.leftAnchor.y = this.y2 - BLOCK_HEIGHT / 2;
         this.rightAnchor = {};
         this.rightAnchor.x = this.x2;
         this.rightAnchor.y = y + BLOCK_HEIGHT / 2;
-        
+
         this.topAnchor = {};
         this.topAnchor.x = this.x2 - BLOCK_WIDTH / 2;
         this.topAnchor.y = y;
         this.bottomAnchor = {};
         this.bottomAnchor.x = this.x2 - BLOCK_WIDTH / 2;
         this.bottomAnchor.y = this.y2;
-        
+
         this.id = stateData.id;
         this.label = stateData.label;
         this.duration = stateData.duration;
@@ -174,7 +174,7 @@ var StatesGraph = (function ($, window) {
             ctx.lineTo(x + 5, y - 5);
         }
 
-        var drawArrowToNextState = function(from, to) {
+        var drawArrowToNextState = function (from, to) {
             ctx.beginPath();
             ctx.moveTo(from.x, from.y);
             ctx.lineTo(to.x, to.y);
@@ -184,8 +184,8 @@ var StatesGraph = (function ($, window) {
             ctx.lineTo(to.x + 5, to.y - 5);
             ctx.stroke();
         }
-        
-        var drawArrowToPreviousState = function(from, to) {
+
+        var drawArrowToPreviousState = function (from, to) {
             ctx.beginPath();
             ctx.moveTo(from.x, from.y);
             ctx.lineTo(from.x + lineMargin, from.y);
@@ -197,8 +197,8 @@ var StatesGraph = (function ($, window) {
             ctx.lineTo(to.x - 5, to.y + 5);
             ctx.stroke();
         }
-        
-        var drawArrowToSameLevelState = function(from, to) {
+
+        var drawArrowToSameLevelState = function (from, to) {
             ctx.beginPath();
             ctx.moveTo(from.x, from.y);
             ctx.lineTo(from.x + lineMargin, from.y);
@@ -210,8 +210,8 @@ var StatesGraph = (function ($, window) {
             ctx.lineTo(to.x - 5, to.y + 5);
             ctx.stroke();
         }
-        
-        if (this.from.x1 == this.to.x1 && this.from.y1 < this.to.y1 ) {
+
+        if (this.from.x1 == this.to.x1 && this.from.y1 < this.to.y1) {
             drawArrowToNextState(this.from.bottomAnchor, this.to.topAnchor);
         } else if (this.from.y1 > this.to.y1) {
             drawArrowToPreviousState(this.from.rightAnchor, this.to.leftAnchor);
@@ -233,7 +233,7 @@ var StatesGraph = (function ($, window) {
         translated = 0;
         currentX = SPACE_BETWEEN_BLOCKS;
         parsedStates = [];
-        
+
         canvas.onmousedown = _mouseDownHandler;
         window.onmousemove = _mouseMoveHandler;
         window.onmouseup = _mouseUpHandler;
@@ -242,7 +242,7 @@ var StatesGraph = (function ($, window) {
         $(window).resize(_respondCanvas);
 
         states.forEach(_parseState);
-        
+
         _respondCanvas();
     }
 
@@ -309,7 +309,7 @@ var StatesGraph = (function ($, window) {
         parsedStates.push(newState);
         _updateCanvasHeight();
     }
-    
+
     var _getRepeatedState = function (state) {
         var repeatedStates = parsedStates.filter(function (s) {
             return state.id == s.id;
@@ -323,13 +323,13 @@ var StatesGraph = (function ($, window) {
         else
             return 20;
     }
-    
+
     var _getLastState = function () {
         return parsedStates[parsedStates.length - 1];
     }
 
     var _updateCanvasHeight = function () {
-        var y = _getY();
+        var y = _getY() + 150;
         if (y > canvas.height)
             canvas.height = y;
     }
